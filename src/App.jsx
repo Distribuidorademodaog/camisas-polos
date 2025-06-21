@@ -4,63 +4,38 @@ import emailjs from '@emailjs/browser';
 import modelo from './assets/camisas.jpg';
 import modelo2 from './assets/camisa2.jpg';
 import tabla from './assets/tabla.jpg';
+import tablach from './assets/tablach.jpg';
 import uno from './assets/1camisa.png';
 import tres from './assets/3camisas.png';
 import seis from './assets/6camisas.png';
 import oferta from './assets/oferta.png';
 
-
 // Colores
-import amarillo from './assets/camisas/camisa-amarillo.jpg';
-import azulclaro from './assets/camisas/camisa-azulclaro.jpg';
-import azulmedio from './assets/camisas/camisa-azulmedio.jpg';
-import azuloscuro from './assets/camisas/camisa-azuloscuro.jpg';
-import azulrey from './assets/camisas/camisa-azulrey.jpg';
-import azulturquesa from './assets/camisas/camisa-azulturquesa.jpg';
+
+import azuloscuro from './assets/camisas/camisa-azul.jpg';
 import beige from './assets/camisas/camisa-beige.jpg';
-import blanco from './assets/camisas/camisa-blanco.jpg';
-import naranja from './assets/camisas/camisa-naranja.jpg';
-import negro from './assets/camisas/camisa-negro.jpg';
-import rojo from './assets/camisas/camisa-rojo.jpg';
-import verde from './assets/camisas/camisa-verde.jpg';
-import rosada from './assets/camisas/camisa-rosada.jpg';
-import verdemanzana from './assets/camisas/camisa-verdemanzana.jpg';
-import bossnegra from './assets/camisas/boss-negra.jpg';
-import bossazul from './assets/camisas/boss-azul.jpg';
-import cuadrosamarillo from './assets/camisas/cuadros-amarillo.jpg'; // Nueva imagen
-import cuadrosazulclaro from './assets/camisas/cuadros-azulclaro.jpg';
-import cuadrosazulmedio from './assets/camisas/cuadros-azulmedio.jpg';
-import cuadrosnaranja from './assets/camisas/cuadros-naranja.jpg';
-import cuadrosnegro from './assets/camisas/cuadros-negro.jpg';
-import cuadrosrosada from './assets/camisas/cuadros-rosada.jpg';
-import videoCamisas from './assets/video-camisas.mp4';
+import blancoclasico from './assets/camisas/camisa-blanca.jpg';
+import verdeclaro from './assets/camisas/camisa-verdeclaro.jpg';
+import verdeoscuro from './assets/camisas/camisa-verdeoscuro.jpg';
+import blancolino from './assets/camisas/blanco.jpg';
+import paloderosa from './assets/camisas/paloderosa.jpg';
+import rosado from './assets/camisas/rosado.jpg';
+import terracota from './assets/camisas/terracota.jpg';
 
-
-const tallas = ["S", "M", "L", "XL", "XXL", "3XL"];
+const tallas = ["S", "M", "L", "XL"];
 
 const colores = [
-  { nombre: "Negro", img: negro },
-  { nombre: "Blanco", img: blanco },
-  { nombre: "Beige", img: beige },
-  { nombre: "Rojo", img: rojo },
-  { nombre: "Azul claro", img: azulclaro },
-  { nombre: "Azul medio", img: azulmedio },
-  { nombre: "Azul oscuro", img: azuloscuro },
-  { nombre: "Azul rey", img: azulrey },
-  { nombre: "Azul turquesa", img: azulturquesa },
-  { nombre: "Naranja", img: naranja },
-  { nombre: "Verde", img: verde },
-  { nombre: "rosada", img: rosada },
-  { nombre: "Amarillo", img: amarillo },
-  { nombre: "verde manzana", img: verdemanzana },
-  { nombre: "Boss negra", img: bossnegra },
-  { nombre: "Boss azul", img: bossazul },
-  { nombre: "cuadros Amarillo", img: cuadrosamarillo },
-  { nombre: "cuadros Azul claro", img: cuadrosazulclaro },
-  { nombre: "cuadros Azul medio", img: cuadrosazulmedio },
-  { nombre: "cuadros naranja", img: cuadrosnaranja },
-  { nombre: "cuadros negro", img: cuadrosnegro },
-  { nombre: "cuadros rosada", img: cuadrosrosada },
+  
+  { nombre: "CH Blanca", img: blancoclasico },
+  { nombre: "CH Beige", img: beige },
+  { nombre: "CH Azul oscura", img: azuloscuro },
+  { nombre: "CH Verde clara", img: verdeclaro },
+  { nombre: "CH verde oscura", img: verdeoscuro },
+  { nombre: "Polo Blanca", img: blancolino },
+  { nombre: "Polo palo de rosa", img: paloderosa },
+  { nombre: "Polo rosada", img: rosado },
+  { nombre: "Polo terracota", img: terracota },
+  
 ];
 
 export default function App() {
@@ -199,16 +174,21 @@ const celularValido = celularSoloNumeros.length === 10;
           </div>
 
           {/* Video demostrativo */}
-<div style={{ margin: "30px 0", textAlign: "center" }}>
-  <video
-    src={videoCamisas}
-    controls
-    autoPlay
-    muted
-    loop
-    style={{ width: "100%", maxWidth: "400px", borderRadius: 10 }}
-  />
-</div>
+
+<video
+  src="/video-camisas.MP4"
+  controls
+  autoPlay
+  muted
+  loop
+  style={{
+    display: 'block',
+    margin: '20px auto',
+    width: '40%',
+    maxWidth: '500px',
+    borderRadius: '12px',
+  }}
+/>
 
           <div style={{ backgroundColor: "#001f3f", padding: 12, borderRadius: 6, margin: "20px 0", color: "#fff", textAlign: "center" }}>
             <h2 style={{ margin: 0 }}>Selecciona un pack</h2>
@@ -236,9 +216,9 @@ const celularValido = celularSoloNumeros.length === 10;
           <div style={{ display: "flex", flexWrap: "wrap", gap: "20px", alignItems: "stretch", justifyContent: "center" }}>
             <img src={oferta} alt="Oferta por tiempo limitado" style={{ width: "100%", maxWidth: 320, borderRadius: 10 }} />
             <div style={{ backgroundColor: "#001f3f", color: "white", padding: 20, borderRadius: 10, maxWidth: 320 }}>
-              <p><strong>• 98% Algodón</strong></p>
+              <p><strong>• Tipo Lino 100% Algodón</strong></p>
               <p><strong>• Calidad Premium</strong></p>
-              <p><strong>• Tallas de la S a la XXXL</strong></p>
+              <p><strong>• Tallas de la S a la XL</strong></p>
               <p><strong>• Tallaje normal</strong></p>
               <p><strong>• Cambios por tallas</strong></p>
               <p><strong>• Garantía de 30 días por imperfectos</strong></p>
@@ -337,6 +317,16 @@ const celularValido = celularSoloNumeros.length === 10;
       <button onClick={() => setStep(3)}>Siguiente</button>
     </div>
     <img src={tabla} alt="Tabla de medidas" style={{ width: "100%", marginTop: 20 }} />
+    <img
+  src={tablach}
+  alt="Tabla de medidas adicional"
+  style={{
+    width: "100%",
+    marginTop: 20,
+    borderRadius: 8,
+    border: "1px solid #ccc"
+  }}
+/>
 
     
   </div>
