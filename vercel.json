@@ -1,5 +1,8 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
-  ]
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "framework": null,
+  "installCommand": "echo 'sitio estatico - sin dependencias'",
+  "buildCommand": "rm -rf dist && mkdir dist && cp index.html video.mp4 video1.mp4 dist/",
+  "outputDirectory": "dist"
 }
